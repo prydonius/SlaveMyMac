@@ -1,0 +1,19 @@
+<a href="#" class="btn">Show all</a>
+<h1>iTunes</h1>
+
+<div id="itunes-view" class="well">
+  <div>
+    <button id="itunes-song-prev" class="btn"><i class="icon-arrow-left"></i></button>
+    <img id="itunes-artwork" class="img-polaroid" src="http://192.168.0.13:3000/api/itunes/artwork" />
+    <button id="itunes-song-next" class="btn"><i class="icon-arrow-right"></i></button>
+  </div>
+  <div>
+    <% var icon_name = (itunes.currentState == 'playing') ? 'pause' : 'play' %>
+    <button id="itunes-play-pause" class="btn btn-large"><i class="icon-<%= icon_name %>"></i></button>
+  </div>
+  <div id="itunes-song-info">
+    <span class="label label-info">Song:</span> <span id="itunes-song-name"><% if (itunes.name != undefined) { %><%= itunes.name %><% } %></span><br />
+    <span class="label label-info">Artist:</span> <span id="itunes-song-artist"><% if (itunes.artist != undefined) { %><%= itunes.artist %><% } %></span><br />
+    <span class="label label-info">Album:</span> <span id="itunes-song-album"><% if (itunes.album != undefined) { %><%= itunes.album %><% } %></span><br />
+  </div>
+</div>

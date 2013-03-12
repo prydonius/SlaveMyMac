@@ -1,0 +1,9 @@
+<%
+  if (directory) {
+    type = 'directory';
+  }
+  else {
+    type = 'file';
+  }
+%>
+<li><a id="<%= id %>" class="type-<%= type %>" href="#files<%= path %>"><%= name %></a></li>

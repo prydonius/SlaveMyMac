@@ -1,0 +1,8 @@
+.nav-grid {
+  text-align: center;
+  div[class^="span"] {
+    background: $grayLighter;
+    padding: 60px;
+    font-size: 40px;
+  }
+}

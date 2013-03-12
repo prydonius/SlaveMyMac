@@ -1,0 +1,122 @@
+/*!
+ * Bootstrap v2.2.0
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// Core variables and mixins
+@import "../components/bootstrap/lib/variables"; // Modify this for custom colors, font-sizes, etc
+@import "../components/bootstrap/lib/mixins";
+
+// CSS Reset
+@import "../components/bootstrap/lib/reset";
+
+// Grid system and page structure
+@import "../components/bootstrap/lib/scaffolding";
+@import "../components/bootstrap/lib/grid";
+@import "../components/bootstrap/lib/layouts";
+@import "custom/layouts";
+
+// Base CSS
+@import "../components/bootstrap/lib/type";
+@import "../components/bootstrap/lib/code";
+@import "../components/bootstrap/lib/forms";
+@import "../components/bootstrap/lib/tables";
+
+// Components: common
+// @import "../components/bootstrap/lib/sprites";
+$font_path: "/scripts/vendor/font/fontawesome-webfont";
+@import "../components/font-awesome/sass/font-awesome";
+@import "../components/bootstrap/lib/dropdowns";
+@import "../components/bootstrap/lib/wells";
+@import "../components/bootstrap/lib/component-animations";
+@import "../components/bootstrap/lib/close";
+
+// Components: Buttons & Alerts
+@import "../components/bootstrap/lib/buttons";
+@import "../components/bootstrap/lib/button-groups";
+@import "../components/bootstrap/lib/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+
+// Components: Nav
+@import "../components/bootstrap/lib/navs";
+@import "custom/navs";
+@import "../components/bootstrap/lib/navbar";
+@import "../components/bootstrap/lib/breadcrumbs";
+@import "../components/bootstrap/lib/pagination";
+@import "../components/bootstrap/lib/pager";
+
+// Components: Popovers
+@import "../components/bootstrap/lib/modals";
+@import "../components/bootstrap/lib/tooltip";
+@import "../components/bootstrap/lib/popovers";
+
+// Components: Misc
+@import "../components/bootstrap/lib/thumbnails";
+@import "../components/bootstrap/lib/media";
+@import "../components/bootstrap/lib/labels-badges";
+@import "../components/bootstrap/lib/progress-bars";
+@import "../components/bootstrap/lib/accordion";
+@import "../components/bootstrap/lib/carousel";
+@import "../components/bootstrap/lib/hero-unit";
+
+// Utility classes
+@import "../components/bootstrap/lib/utilities"; // Has to be last to override when necessary
+
+@import "../components/bootstrap/lib/responsive";
+
+.centre {
+  text-align: center;
+}
+
+// Files View
+
+ul#file-list {
+  list-style: none;
+  li > a.type-directory, a.type-back {
+    color: $green;
+  }
+}
+
+// iTunes View
+
+img#itunes-artwork {
+  width: 190px;
+  height: 190px;
+}
+
+div#itunes-view {
+  @extend .centre;
+  div {
+    margin: 10px 0;
+    &#itunes-song-info {
+      text-align: left;
+    }
+  }
+}
+
+// MPlayerX View
+
+div#mplayerx-remote {
+  display: table;
+  button {
+    margin: 0 2px;
+  }
+  .second-row {
+    float: left;
+    button {
+      margin: 0;
+    }
+  }
+  .volume-buttons {
+    float: left;
+    width: 54px;
+    margin-top: -3px;
+    button {
+      margin-left: 10px;
+    }
+  }
+}
